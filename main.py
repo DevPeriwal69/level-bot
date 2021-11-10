@@ -8,15 +8,10 @@ payload = {
 }
 
 header = {
-    'authorization': 'NzUzODM0NjY4NTkxMTUzMTYy.YYtZ7Q.v9j-EMNAYltwuUyo_CF0E5lcDiQ'
+    'authorization': 'NzUzODM0NjY4NTkxMTUzMTYy.YYtfMA.Yx7rIi8kFbRqPkMUzFITz5bTvsg'
 }
 
-def send():
-    r = requests.post('https://discord.com/api/v9/channels/490935325259202560/messages', data=payload, headers=header)
 
-
-sending = True
-
-while sending:
+while True:
     time.sleep(60)
-    send()
+    r = requests.post('https://discord.com/api/v9/channels/490935325259202560/messages', data=payload, headers=header)
